@@ -38,7 +38,7 @@ describe("Spaceship", function() {
   });
 
   it("should have the correct layer of shields (4)", function() {
-    expect(spaceship.phasers).toBe(4);
+    expect(spaceship.shields).toBe(4);
   });
 
   it("should have it's cloaking set to false by default", function() {
