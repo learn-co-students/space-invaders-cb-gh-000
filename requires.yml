@@ -1,0 +1,6 @@
+# A list of javascript files required for the project, in dependency order
+javascripts:
+  files:
+    - js/space-invader.js
+  specs:
+    - spec/space-invaders_spec.js

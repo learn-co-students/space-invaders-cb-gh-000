@@ -15,7 +15,7 @@ describe("CrewMember", function() {
     expect(tristan.ship).toBe('Looking for a Rig');
   });
 
-  it("should return 'had no effect' when the crewMember tries to use their special ability", function() {
+  it("should return 'had no effect' when the crew member tries to use their special ability", function() {
     expect(tristan.engageWarpDrive()).toBe('had no effect');
     expect(jon.setsInvisibility()).toBe('had no effect');
     expect(katie.chargePhasers()).toBe('had no effect');    
@@ -24,7 +24,11 @@ describe("CrewMember", function() {
 
 describe("Spaceship", function() {
   beforeEach(function() {
-    var spaceship = new Spaceship([], 5, 4);
+    var spaceship = new Spaceship("The Krestel", [], 5, 4);
+  });
+
+  it("should know it's own name", function() {
+    expect(spaceship.name).toBe("The Krestel");
   });
 
   it("should have the correct number of phasers", function() {
@@ -57,11 +61,15 @@ describe("Ship with a crew", function() {
     var tristan = new CrewMember("Pilot"),
         jon = new CrewMember("Defender"),
         katie = new CrewMember("Gunner"),
-        spaceship = new Spaceship([tristan, jon, katie], 5, 4);
+        spaceship = new Spaceship("The Krestel", [tristan, jon, spaceship], 5, 4);
   });
 
   it("should return false for docked with a crew", function() {
     expect(spaceship.docked).toBe(false);
+  });
+
+  it("a crew member should return their ship name when ship is called on them", function() {
+    expect(tristan.ship).toBe("The Krestel");
   });
 
   it("should charge its phasers when a gunner calls `chargePhasers`", function() {
