@@ -1,8 +1,8 @@
 describe("CrewMember", function() {
   var tristan, jon, katie;
   beforeEach(function() {
-    tristan = new CrewMember("Pilot"),
-    jon = new CrewMember("Defender"),
+    tristan = new CrewMember("Pilot");
+    jon = new CrewMember("Defender");
     katie = new CrewMember("Gunner");
   });
 
@@ -61,10 +61,10 @@ describe("Spaceship", function() {
 describe("Ship with a crew", function() {
   var tristan, jon, katie, spaceship;
   beforeEach(function() {
-    tristan = new CrewMember("Pilot"),
-    jon = new CrewMember("Defender"),
-    katie = new CrewMember("Gunner"),
-    spaceship = new Spaceship("The Krestel", [tristan, jon, spaceship], 5, 4);
+    tristan = new CrewMember("Pilot");
+    jon = new CrewMember("Defender");
+    katie = new CrewMember("Gunner");
+    spaceship = new Spaceship("The Krestel", [tristan, jon, katie], 5, 4);
   });
 
   it("should return false for docked with a crew", function() {
