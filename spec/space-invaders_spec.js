@@ -1,8 +1,9 @@
 describe("CrewMember", function() {
+  var tristan, jon, katie;
   beforeEach(function() {
-    var tristan = new CrewMember("Pilot"),
-        jon = new CrewMember("Defender"),
-        katie = new CrewMember("Gunner");
+    tristan = new CrewMember("Pilot"),
+    jon = new CrewMember("Defender"),
+    katie = new CrewMember("Gunner");
   });
 
   it("should know their position", function() {
@@ -23,20 +24,21 @@ describe("CrewMember", function() {
 });
 
 describe("Spaceship", function() {
+  var spaceship;
   beforeEach(function() {
-    var spaceship = new Spaceship("The Krestel", [], 5, 4);
+    spaceship = new Spaceship("The Krestel", [], 5, 4);
   });
 
   it("should know it's own name", function() {
     expect(spaceship.name).toBe("The Krestel");
   });
 
-  it("should have the correct number of phasers", function() {
+  it("should have the correct number of phasers (5)", function() {
     expect(spaceship.phasers).toBe(5);
   });
 
-  it("should have the correct layer of shields", function() {
-    expect(spaceship.phasers).toBe(5);
+  it("should have the correct layer of shields (4)", function() {
+    expect(spaceship.phasers).toBe(4);
   });
 
   it("should have it's cloaking set to false by default", function() {
@@ -57,11 +59,12 @@ describe("Spaceship", function() {
 });
 
 describe("Ship with a crew", function() {
+  var tristan, jon, katie, spaceship;
   beforeEach(function() {
-    var tristan = new CrewMember("Pilot"),
-        jon = new CrewMember("Defender"),
-        katie = new CrewMember("Gunner"),
-        spaceship = new Spaceship("The Krestel", [tristan, jon, spaceship], 5, 4);
+    tristan = new CrewMember("Pilot"),
+    jon = new CrewMember("Defender"),
+    katie = new CrewMember("Gunner"),
+    spaceship = new Spaceship("The Krestel", [tristan, jon, spaceship], 5, 4);
   });
 
   it("should return false for docked with a crew", function() {
