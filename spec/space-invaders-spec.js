@@ -13,7 +13,7 @@ describe("CrewMember", function() {
   });
 
   it("should should return 'Looking for a Rig' if they aren't assigned to a ship", function() {
-    expect(tristan.ship).toBe('Looking for a Rig');
+    expect(tristan.currentShip).toBe('Looking for a Rig');
   });
 
   it("should return 'had no effect' when the crew member tries to use their special ability", function() {
@@ -71,8 +71,8 @@ describe("Ship with a crew", function() {
     expect(spaceship.docked).toBe(false);
   });
 
-  it("a crew member should return their ship name when ship is called on them", function() {
-    expect(tristan.ship).toBe("The Krestel");
+  it("a crew member should return their ship name when currentShip is called on them", function() {
+    expect(tristan.currentShip).toBe("The Krestel");
   });
 
   it("should charge its phasers when a gunner calls `chargePhasers`", function() {
