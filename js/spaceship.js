@@ -21,7 +21,7 @@ Spaceship.prototype.notifyCrew = function(){
   // need to assign this to that `name` isn't called on the window
   var that = this;
   this.crew.forEach(function(crewMember){
-    crewMember.ship = that.name;
+    crewMember.currentShip = that.name;
     crewMember.spaceship = that;
   });
 }
