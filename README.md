@@ -5,8 +5,7 @@ level: advanced
 ---
 
 # Space Invaders
-## test
-### test 2
+## Instructions:
 
 Space flight is no joke, and neither is this lab.  You're going to need to create two JS constructors, `Spaceship` and `CrewMember`. These constructors will pump out instances that are by default unable to interact with one another.  A space ship will be inactive if it is created without a crew.  And a crew member by default will be hanging out in the Cantina looking for a ride if they were not put inside a ship when it is initialized.
 
