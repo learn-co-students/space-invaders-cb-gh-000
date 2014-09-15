@@ -1,7 +1,7 @@
 # A list of javascript files required for the project, in dependency order
 javascripts:
   files:
-    - js/crewMember.js
-    - js/spaceship.js
+    - lib/crewMember.js
+    - lib/spaceship.js
   specs:
     - spec/space-invaders-spec.js
