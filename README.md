@@ -16,8 +16,8 @@ To have these two object types be aware of one another we need to have the ship 
 To run the specs follow these commands:
 - first install the new gem to run the tests
   - `gem sources -a http://flatiron:33west26@gems.flatironschool.com`
-  - `gem install jasmine-flatiron`
+  - `gem install ironboard`
 - to run in the command line run
-  -  `jasmine-flatiron`
+  -  `ironboard`
 - to run in the browser
-  - `jasmine-flatiron -b`
+  - `ironboard -b`
