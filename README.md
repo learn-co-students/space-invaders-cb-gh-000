@@ -1,9 +1,3 @@
----
-tags: OO, object interactions
-languages: JavaScript
-level: advanced
----
-
 # Space Invaders
 ## Instructions:
 
