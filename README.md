@@ -16,4 +16,4 @@ To run the specs follow these commands:
 - to run in the browser
   - `learn -b`
 
-<a href='https://learn.co/lessons/space-invaders' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/space-invaders' title='Space Invaders'>Space Invaders</a> on Learn.co and start learning to code for free.</p>
