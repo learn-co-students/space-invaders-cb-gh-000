@@ -15,4 +15,3 @@ To run the specs follow these commands:
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/space-invaders' title='Space Invaders'>Space Invaders</a> on Learn.co and start learning to code for free.</p>
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/space-invaders'>JS Space Invaders Lab</a> on Learn.co and start learning to code for free.</p>
