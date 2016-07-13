@@ -1,0 +1,39 @@
+{
+  "name": "space-invaders",
+  "version": "1.0.0",
+  "description": "Space flight is no joke, and neither is this lab.  You're going to need to create two JS constructors, `Spaceship` and `CrewMember`. These constructors will pump out instances that are by default unable to interact with one another.  A space ship will be inactive if it is created without a crew.  And a crew member by default will be hanging out in the Cantina looking for a ride if they were not put inside a ship when it is initialized.",
+  "main": "crewMember.js",
+  "engines": {
+    "node": "6.x",
+    "npm": "3.x"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learn-co-curriculum/space-invaders.git"
+  },
+  "keywords": [
+    "js",
+    "classes",
+    "oop"
+  ],
+  "author": "scottcreynolds",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/learn-co-curriculum/space-invaders/issues"
+  },
+  "homepage": "https://github.com/learn-co-curriculum/space-invaders#readme",
+  "dependencies": {
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "expect": "^1.20.2",
+    "jsdom": "^9.4.1",
+    "mocha": "^2.5.3",
+    "mocha-jsdom": "^1.1.0"
+  }
+}
