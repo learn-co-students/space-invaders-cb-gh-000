@@ -35,5 +35,8 @@
     "jsdom": "^9.4.1",
     "mocha": "^2.5.3",
     "mocha-jsdom": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha-multi": "^0.9.0"
   }
 }
