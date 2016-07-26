@@ -17,10 +17,12 @@ class Spaceship {
   }
 
   notifyCrew(){
-    // need to assign this to that `name` isn't called on the window
-    var that = this;
-    this.crew.forEach(function(crewMember){
-      crewMember.currentShip = that;
+    // using an arrow function lexically
+    // binds `this` to the context of this
+    // instance of Spaceship, rather than
+    // the context of the callback
+    this.crew.forEach(crewMember => {
+      crewMember.currentShip = this;
     });
   }
 }
