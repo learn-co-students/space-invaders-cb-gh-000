@@ -10,7 +10,7 @@ To have these two objects be aware of one another, we need to have the ship beco
 
 
 TLDR;
-A ship cannot exist without a crew and an individual crew member can't use thier special ability if not assigned to a ship.
+A ship cannot exist without a crew and an individual crew member can't use their special ability if not assigned to a ship.
 
 ![alt text](https://media.giphy.com/media/26uf9QPzzlKPvQG5O/giphy.gif "space ship gif")
 
