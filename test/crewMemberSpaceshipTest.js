@@ -19,14 +19,6 @@ describe("ship with a crew", () => {
     });
   });
 
-  describe("crew member with a currentShip", () => {
-    it("should return an instance of a ship", () => {
-      expect(tristan.currentShip).to.be.an("object");
-      expect(tristan.currentShip.constructor).to.be.a("function");
-      expect(tristan.currentShip.name).to.eq("Millenium Falcon");
-    });
-  });
-
   describe("spaceship charge phasers", () => {
     it("a crew member assigned to a ship should be able to charge phasers", () => {
       tristan.chargePhasers();
@@ -36,27 +28,44 @@ describe("ship with a crew", () => {
       expect(aluminumFalcon.phasersCharge).to.match(/charged/i);
     });
   });
-});
 
-//   it("should charge its phasers when a gunner calls `chargePhasers`", function() {
-//     tristan.chargePhasers();
-//     expect(spaceship.phasersCharge).toBe("uncharged");
-//     katie.chargePhasers();
-//     expect(spaceship.phasersCharge).toBe("charged!");
-//   });
-//
-//   it('should have its warp drive set to "engaged" only when the pilot uses `engageWarpDrive`', function() {
-//     jon.engageWarpDrive();
-//     expect(spaceship.warpDrive).toBe("disengaged");
-//     tristan.engageWarpDrive();
-//     expect(spaceship.warpDrive).toBe("engaged!");
-//   });
-//
-//   it("should cloak when a defender `setsInvisibility`", function() {
-//     katie.setsInvisibility();
-//     expect(spaceship.cloaked).toBe(false);
-//     jon.setsInvisibility();
-//     expect(spaceship.cloaked).toBe(true);
-//   });
-//   // });
-// });
+  describe("engage warp drive", () => {
+    it("should set spaceship warp drive to 'engaged' when pilot uses engageWarpDrive()", () => {
+      jon.engageWarpDrive();
+      expect(aluminumFalcon.warpDrive).to.match(/disengaged/i);
+
+      tristan.engageWarpDrive();
+      expect(aluminumFalcon.warpDrive).to.match(/engaged/i);
+    });
+  });
+
+  describe("cloak", () => {
+    it("should cloak the ship when a defender uses setsInvisibility()", () => {
+      katie.setsInvisibility();
+      expect(aluminumFalcon.cloaked).to.eq(false);
+
+      jon.setsInvisibility();
+      expect(aluminumFalcon.cloaked).to.eq(true);
+    });
+  });
+
+  describe("crew member with a currentShip", () => {
+    it("a newly created spaceship should be an instance of a spaceship", () => {
+      expect(tristan.currentShip).to.be.an("object");
+      expect(tristan.currentShip).to.be.an.instanceOf(Spaceship);
+      expect(tristan.currentShip.constructor).to.be.a("function");
+    });
+
+    it("should create the association between a crew member and ship", () => {
+      expect(tristan.currentShip.shields).to.eq(4);
+      expect(tristan.currentShip).to.have.own.property(
+        "name",
+        "Millenium Falcon"
+      );
+      //tristan is an instance of crewMember and is passed in as first arg to spaceship; therefore, tristan should be the first crew member of tristan's spaceship
+      expect(tristan.currentShip.crew[0]).to.deep.eq(tristan);
+      expect(tristan.currentShip.crew[1]).to.deep.eq(jon);
+      expect(tristan.currentShip.crew[2]).to.deep.eq(katie);
+    });
+  });
+});

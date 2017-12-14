@@ -22,7 +22,7 @@ describe("spaceShip.js", () => {
     });
 
     it("should have its warp drive set to 'disengaged' by default", () => {
-      expect(spaceship.warpDrive).to.eq("disengaged");
+      expect(spaceship.warpDrive).to.match(/disengaged/i);
     });
 
     it("should be docked if it has no crew", () => {
@@ -30,7 +30,7 @@ describe("spaceShip.js", () => {
     });
 
     it("should have its 'phasers' charge set to 'uncharged' by default", () => {
-      expect(spaceship.phasersCharge).to.eq("uncharged");
+      expect(spaceship.phasersCharge).to.match(/uncharged/i);
     });
   });
 });
