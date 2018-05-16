@@ -14,7 +14,7 @@ describe("crewMember.js", () => {
     expect(katie.position).to.eq("Gunner");
   });
 
-  it("should should return 'Looking for a Rig' if they aren't assigned to a ship", () => {
+  it("should return 'Looking for a Rig' if they aren't assigned to a ship", () => {
     expect(tristan.currentShip).to.match(/Looking for a Rig/i);
   });
 
