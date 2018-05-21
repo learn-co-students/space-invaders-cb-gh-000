@@ -1,17 +1,17 @@
 const expect = chai.expect;
 
-describe("crewMember.js", () => {
+describe('crewMember.js', () => {
   let tristan, jon, katie;
   beforeEach(() => {
-    tristan = new CrewMember("Pilot");
-    jon = new CrewMember("Defender");
-    katie = new CrewMember("Gunner");
+    tristan = new CrewMember('Pilot');
+    jon = new CrewMember('Defender');
+    katie = new CrewMember('Gunner');
   });
 
-  it("should know their position", () => {
-    expect(tristan.position).to.eq("Pilot");
-    expect(jon.position).to.eq("Defender");
-    expect(katie.position).to.eq("Gunner");
+  it('should know their position', () => {
+    expect(tristan.position).to.eq('Pilot');
+    expect(jon.position).to.eq('Defender');
+    expect(katie.position).to.eq('Gunner');
   });
 
   it("should return 'Looking for a Rig' if they aren't assigned to a ship", () => {
