@@ -33,20 +33,20 @@ describe('ship with a crew', () => {
   describe('charge phasers', () => {
     it("it should set phasers to 'charged' when the gunner chargePhasers()", () => {
       pilot.chargePhasers();
-      expect(aluminumFalcon.phasersCharge).to.match(/uncharged/i);
+      expect(aluminumFalcon.phasersCharge).to.eq('uncharged');
 
       gunner.chargePhasers();
-      expect(aluminumFalcon.phasersCharge).to.match(/charged/i);
+      expect(aluminumFalcon.phasersCharge).to.eq('charged');
     });
   });
 
   describe('engage warp drive', () => {
     it("should set the spaceship's warp drive to 'engaged' when the pilot uses engageWarpDrive()", () => {
       defender.engageWarpDrive();
-      expect(aluminumFalcon.warpDrive).to.match(/disengaged/i);
+      expect(aluminumFalcon.warpDrive).to.eq('disengaged');
 
       pilot.engageWarpDrive();
-      expect(aluminumFalcon.warpDrive).to.match(/engaged/i);
+      expect(aluminumFalcon.warpDrive).to.eq('engaged');
     });
   });
 
